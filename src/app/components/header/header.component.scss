@@ -1,0 +1,25 @@
+.header {
+  height: 60px;
+  display: flex;
+  padding-bottom: 10px;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.02);
+
+  &__logo {
+    width: 320px;
+  }
+
+  &__logo-img {
+    height: 60px;
+    margin-right: 50px;
+  }
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    color: #2D3748;
+    font-size: 28px;
+    font-weight: 500;
+  }
+}

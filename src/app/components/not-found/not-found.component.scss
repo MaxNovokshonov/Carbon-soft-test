@@ -1,0 +1,23 @@
+@mixin font {
+  font-family: 'Roboto', sans-serif;
+  color: #4FD1C5;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  &__title {
+    @include font;
+    font-weight: 700;
+  }
+
+  &__description {
+    @include font
+  }
+}

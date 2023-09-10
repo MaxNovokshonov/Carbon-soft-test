@@ -1,0 +1,109 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 99999;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  //display: none;
+
+  &-block {
+    position: relative;
+    width: 500px;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background-color: #F8F9FA;
+
+    &__form {
+      position: relative;
+    }
+
+    &__close {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      border-radius: 5px;
+      background-color: #4FD1C5;
+      border: none;
+      top: -110px;
+      right: -35px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    &__title {
+      color: #4FD1C5;
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &__label {
+      position: relative;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    &__input {
+      padding: 20px;
+      width: 460px;
+      border-radius: 10px;
+      border: 1px solid #E2E8F0;
+      background-color: #FFFFFF;
+      box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.02);
+      color: #2D3748;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    &__input:hover,
+    &__input:focus-visible {
+      outline: none;
+      border-color: #4FD1C5;
+    }
+
+    &__input--area {
+      height: 140px;
+      resize: none;
+    }
+
+    &__value {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      font-size: 14px;
+      color: #2D3748;
+      font-weight: 700;
+    }
+
+    &__btn {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      background-color: #4FD1C5;
+      padding: 15px 20px;
+      border: none;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    &__btn:hover {
+      background-color: #FFFFFF;
+      color: #4FD1C5;
+      outline: 1px solid #4FD1C5;
+    }
+
+  }
+}

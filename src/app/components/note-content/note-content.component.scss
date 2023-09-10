@@ -1,0 +1,27 @@
+@mixin content {
+  margin: 0 0 20px;
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 3.5px 5.5px 0 rgba(0, 0, 0, 0.02);
+  font-family: 'Roboto', sans-serif;
+  color: #2D3748;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  padding: 0 20px;
+
+  &__title {
+    @include content;
+    font-weight: 700;
+  }
+
+  &__text {
+    @include content;
+    min-height: 500px;
+  }
+}
