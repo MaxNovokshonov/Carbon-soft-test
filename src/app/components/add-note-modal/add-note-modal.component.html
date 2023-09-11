@@ -1,24 +1,45 @@
 <div class="modal">
   <div class="modal-block">
     <h3 class="modal-block__title">Создать заметку</h3>
-    <form class="modal-block__form">
-      <button class="modal-block__close">X</button>
+    <form
+      (ngSubmit)="submit()"
+      [formGroup]="addNoteForm"
+      class="modal-block__form">
+      <button
+        (click)="closeModal($event)"
+        class="modal-block__close">X
+      </button>
       <label class="modal-block__label">
         <input
           class="modal-block__input"
-          type="text"
+          formControlName="title"
           placeholder="Введите название заметки"
+          type="text"
         />
         <span class="modal-block__value">Название</span>
+        <span
+          *ngIf="title.errors?.required && title.touched"
+          class="modal-block__error"
+        >Поле обязательно для заполнения</span
+        >
       </label>
       <label class="modal-block__label">
             <textarea
               class="modal-block__input modal-block__input--area"
+              formControlName="text"
               placeholder="Введите текст заметки"
             ></textarea>
         <span class="modal-block__value">Текст заметки</span>
+        <span
+          *ngIf="text.errors?.required && text.touched"
+          class="modal-block__error"
+        >Поле обязательно для заполнения</span
+        >
       </label>
-      <button class="modal-block__btn" type="submit">Создать</button>
+      <button
+        [disabled]="addNoteForm.invalid"
+        class="modal-block__btn" type="submit">Создать
+      </button>
     </form>
   </div>
 </div>

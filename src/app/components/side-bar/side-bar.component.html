@@ -1,4 +1,7 @@
+<app-add-note-modal (addNoteEvent)="addNote($event)" (closeModalEvent)="closeModal()" *ngIf="isModalOpen"
+                    [nextID]="notes.length"></app-add-note-modal>
+
 <aside class="side-bar">
+  <button (click)="openModal()" class="side-bar__btn" type="button">Добавить заметку</button>
   <app-note *ngFor="let note of notes" [note]="note"></app-note>
-  <button class="side-bar__btn" type="button">Добавить заметку</button>
 </aside>
